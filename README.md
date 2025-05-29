@@ -1,85 +1,66 @@
-Snake Game
-A simple GUI-based Snake game built using SFML in C++.
+# Snake Game
 
-🎮 Gameplay
-Control the snake using arrow keys.
+A simple GUI-based Snake game built using [SFML](https://www.sfml-dev.org/) in C++.
 
-Eat the food to grow longer.
+## 🎮 Gameplay
 
-Avoid colliding with the walls or yourself.
-GitHub
+- Control the snake using arrow keys.
+- Eat the food to grow longer.
+- Avoid colliding with the walls or yourself.
 
-🛠️ Installation
-Prerequisites
-C++ compiler (e.g., g++)
+## 🛠️ Installation
 
-SFML library
+### Prerequisites
 
-On Ubuntu
-Install SFML:
+- C++ compiler (e.g., `g++`)
+- SFML library
 
-bash
-Copy
-Edit
-sudo apt update
-sudo apt install libsfml-dev
-Clone the repository:
+### On Ubuntu
 
-bash
-Copy
-Edit
-git clone https://github.com/s-aaahill/Snake.git
-cd Snake
-Compile the game:
+1. **Install SFML:**
 
-bash
-Copy
-Edit
-g++ -o snake main.cpp Game.cpp Snake.cpp Food.cpp -lsfml-graphics -lsfml-window -lsfml-system
-Run the game:
+   ```bash
+   sudo apt update
+   sudo apt install libsfml-dev
+````
 
-bash
-Copy
-Edit
-./snake
-📁 Project Structure
-main.cpp – Entry point of the application.
+2. **Clone the repository:**
 
-Game.hpp/cpp – Manages game logic and loop.
+   ```bash
+   git clone https://github.com/s-aaahill/Snake.git
+   cd Snake
+   ```
 
-Snake.hpp/cpp – Handles snake behavior and rendering.
+3. **Compile the game:**
 
-Food.hpp/cpp – Manages food generation and rendering.
+   ```bash
+   g++ -o snake main.cpp Game.cpp Snake.cpp Food.cpp -lsfml-graphics -lsfml-window -lsfml-system
+   ```
 
-Common.hpp – Contains shared constants and configurations.
-GitHub
+4. **Run the game:**
 
-🚀 Features
-Smooth snake movement.
+   ```bash
+   ./snake
+   ```
 
-Random food placement.
+## 📁 Project Structure
 
-Collision detection for walls and self.
+* `main.cpp` – Entry point of the application.
+* `Game.hpp/cpp` – Manages game logic and loop.
+* `Snake.hpp/cpp` – Handles snake behavior and rendering.
+* `Food.hpp/cpp` – Manages food generation and rendering.
+* `Common.hpp` – Contains shared constants and configurations.
 
-Score tracking (if implemented).
+## 🚀 Features
 
-🧩 Future Enhancements
-Add a scoring system.
+* Smooth snake movement.
+* Random food placement.
+* Collision detection for walls and self.
+* Score tracking (if implemented).
 
-Implement different difficulty levels.
+## 🧩 Future Enhancements
 
-Introduce sound effects.
-
-Create a start menu and game over screen.
-YouTube
-+2
-GitHub Docs
-+2
-GitHub Docs
-+2
-GitHub Docs
-+2
-YouTube
-+2
-YouTube
-+2
+* Add a scoring system.
+* Implement different difficulty levels.
+* Introduce sound effects.
+* Create a start menu and game over screen.
