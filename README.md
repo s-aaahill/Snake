@@ -22,7 +22,6 @@ A simple GUI-based Snake game built using [SFML](https://www.sfml-dev.org/) in C
    ```bash
    sudo apt update
    sudo apt install libsfml-dev
-````
 
 2. **Clone the repository:**
 
@@ -42,7 +41,6 @@ A simple GUI-based Snake game built using [SFML](https://www.sfml-dev.org/) in C
    ```bash
    ./snake
    ```
-
 ## 📁 Project Structure
 
 * `main.cpp` – Entry point of the application.
