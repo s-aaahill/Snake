@@ -7,6 +7,7 @@ A simple GUI-based Snake game built using [SFML](https://www.sfml-dev.org/) in C
 - Control the snake using arrow keys.
 - Eat the food to grow longer.
 - Avoid colliding with the walls or yourself.
+- **Restart**: Press `Enter`, `Space`, or click the text to restart after Game Over.
 
 ## 🛠️ Installation
 
@@ -53,7 +54,8 @@ A simple GUI-based Snake game built using [SFML](https://www.sfml-dev.org/) in C
 
 * Smooth snake movement.
 * Random food placement.
-* Collision detection for walls and self.
+- Collision detection for walls and self.
+- Game Over screen with restart option.
 * Score tracking (if implemented).
 
 ## 🧩 Future Enhancements
@@ -61,4 +63,4 @@ A simple GUI-based Snake game built using [SFML](https://www.sfml-dev.org/) in C
 * Add a scoring system.
 * Implement different difficulty levels.
 * Introduce sound effects.
-* Create a start menu and game over screen.
+* Create a start menu.
