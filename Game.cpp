@@ -8,7 +8,7 @@ Game::Game()
       TimePerFrame(sf::seconds(0.15f)), // Snake speed
       timeSinceLastUpdate(sf::Time::Zero)
 {
-    if (!font.loadFromFile("arial.ttf")) {
+    if (!font.loadFromFile("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")) {
         std::cerr << "Error: Could not load font 'arial.ttf'. "
                   << "Ensure it's in the working directory.\n";
         // Game can continue, but text won't show
@@ -23,6 +23,15 @@ Game::Game()
     gameOverText.setOrigin(textBounds.left + textBounds.width / 2.0f,
                            textBounds.top + textBounds.height / 2.0f);
     gameOverText.setPosition(WINDOW_WIDTH / 2.0f, WINDOW_HEIGHT / 2.0f);
+
+    restartText.setFont(font);
+    restartText.setString("Press Enter or Click to Restart");
+    restartText.setCharacterSize(30);
+    restartText.setFillColor(sf::Color::White);
+    sf::FloatRect restartBounds = restartText.getLocalBounds();
+    restartText.setOrigin(restartBounds.left + restartBounds.width / 2.0f,
+                          restartBounds.top + restartBounds.height / 2.0f);
+    restartText.setPosition(WINDOW_WIDTH / 2.0f, WINDOW_HEIGHT / 2.0f + 60.0f);
 
     resetGame(); // Initial setup
 }
@@ -65,8 +74,16 @@ void Game::processEvents() {
                 snake.handleInput(event.key.code);
             } else if (gameState == GameState::GameOver) {
                 if (event.key.code == sf::Keyboard::Enter || event.key.code == sf::Keyboard::Space) {
-                     // Optional: Restart game on Enter/Space after game over
-                    // resetGame();
+                    resetGame();
+                }
+            }
+        }
+        if (event.type == sf::Event::MouseButtonPressed) {
+            if (gameState == GameState::GameOver && event.mouseButton.button == sf::Mouse::Left) {
+                sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+                sf::Vector2f mousePosF(static_cast<float>(mousePos.x), static_cast<float>(mousePos.y));
+                if (restartText.getGlobalBounds().contains(mousePosF)) {
+                    resetGame();
                 }
             }
         }
@@ -118,6 +135,7 @@ void Game::render() {
 
     if (gameState == GameState::GameOver) {
         window.draw(gameOverText);
+        window.draw(restartText);
     }
 
     window.display();

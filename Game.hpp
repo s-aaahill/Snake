@@ -27,6 +27,7 @@ private:
 
     sf::Font font;
     sf::Text gameOverText;
+    sf::Text restartText;
 
     sf::Clock gameClock;
     sf::Time timeSinceLastUpdate;
