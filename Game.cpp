@@ -19,6 +19,7 @@ Game::Game()
     gameOverText.setFillColor(sf::Color::White);
     gameOverText.setStyle(sf::Text::Bold);
     // Center text
+    
     sf::FloatRect textBounds = gameOverText.getLocalBounds();
     gameOverText.setOrigin(textBounds.left + textBounds.width / 2.0f,
                            textBounds.top + textBounds.height / 2.0f);
