@@ -16,13 +16,14 @@ A simple GUI-based Snake game built using [SFML](https://www.sfml-dev.org/) in C
 - C++ compiler (e.g., `g++`)
 - SFML library
 
-### On Ubuntu
+### On Ubuntu/Fedora
 
 1. **Install SFML:**
 
    ```bash
    sudo apt update
    sudo apt install libsfml-dev
+   //sudo dnf install SFML-devel
 
 2. **Clone the repository:**
 
