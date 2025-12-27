@@ -48,20 +48,6 @@ void Snake::update() {
 
 void Snake::grow() {
     if (segments.empty()) return;
-    // To grow, we effectively re-add the segment that would have been popped.
-    // The update() method always pops, so if we grow, we add one extra at the tail.
-    // A simpler way is to just not pop_back() in update() if growth happens.
-    // For this structure, let's assume growth means adding to tail based on last tail direction.
-    // However, the common method is: move (add head, pop tail), then if food eaten, re-add tail.
-    // So, update() always moves (adds head, pops tail). If food eaten, call grow() which
-    // adds a segment at the previous tail's position.
-    // Let's modify: update() adds head. grow() adds another segment. If not growing, update() pops.
-    // For simplicity matching the single file: update adds head, if not growing, it also pops tail.
-    // grow() will simply prevent the pop_back for one frame.
-    // To implement grow correctly with current `update()`:
-    // `update()` adds head. If `grow()` was called, it will effectively make the snake longer.
-    // The logic should be: move snake, check food. If food, don't pop tail.
-    // Here, we'll just add a segment to the tail. It's simpler for this structure.
     segments.push_back(segments.back()); // Duplicate the last segment to grow
 }
 

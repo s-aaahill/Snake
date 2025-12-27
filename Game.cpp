@@ -8,9 +8,9 @@ Game::Game()
       TimePerFrame(sf::seconds(0.15f)), // Snake speed
       timeSinceLastUpdate(sf::Time::Zero)
 {
-    if (!font.loadFromFile("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")) {
-        std::cerr << "Error: Could not load font 'arial.ttf'. "
-                  << "Ensure it's in the working directory.\n";
+    if (!font.loadFromFile("/usr/share/fonts/dejavu-sans-fonts/DejaVuSans.ttf")) {
+        std::cerr << "Error: Could not load font 'DejaVuSans.ttf'. "
+                  << "Ensure it's in the working directory or installed.\n";
         // Game can continue, but text won't show
     }
     gameOverText.setFont(font);
